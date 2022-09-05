@@ -1,0 +1,77 @@
+@stage-color: rgb(200, 238, 130);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; //change default border calc
+} 
+
+body {
+    font: bold 20px 'Courier New', Courier, monospace;
+}
+
+#main {
+    width: 360px;
+    height: 420px;
+    background-color:rgb(197, 235, 197);
+    border: 10px solid rgb(50, 55, 115);
+    border-radius: 10px;
+    margin: 100px auto;
+
+    //flex box mold
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#stage {
+    width: 304px;
+    height: 304px;
+    background-color: @stage-color;
+    border: 2px solid rgb(50, 55, 115);
+    
+    position: relative;
+
+    // set snake
+    #snake {
+        &>div {
+            width: 10px;
+            height: 10px;
+            background-color:rgb(207, 102, 63);
+            border: 1px solid @stage-color;
+
+            position: absolute;
+        }
+    }
+
+    //set food
+    #food {
+        width: 10px;
+        height: 10px;
+
+        position: absolute;
+        left: 40px;
+        top: 100px;
+
+        //adjust al
+        display: flex; 
+        flex-flow: row wrap; 
+        align-content: space-between;   
+        justify-items: space-between;   
+
+        //food stylish
+        &>div {
+            width: 4px;
+            height: 4px;
+            background-color: rgb(24, 68, 244);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+#score-panel {
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+}

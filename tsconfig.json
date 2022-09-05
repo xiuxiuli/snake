@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2016",                        /* Control what method is used to detect module-format JS files. */
+    "module": "commonjs",                                 /* Create source map files for emitted JavaScript files. */
+    // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+    // "outDir": ".dist/",                                   /* Specify an output folder for all emitted files. */
+    "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+  }
+}
